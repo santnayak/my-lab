@@ -1,0 +1,202 @@
+{
+  "requested_model": "nimble",
+  "instructions": "Based only on the supplied forecast, will it rain on the specified date? Do not invent weather data or infer weather from location or date alone.",
+  "results": [
+    {
+      "experiment": "A",
+      "state_label": "No evidence",
+      "expected_conceptually": "insufficient evidence",
+      "state": {
+        "location": "Berlin",
+        "date": "2026-10-06"
+      },
+      "noul_yes": 0.5082942833688233,
+      "noul_response": {
+        "model": "nimble",
+        "usage": {
+          "input_tokens": 201,
+          "output_tokens": 1
+        },
+        "answers": {
+          "might_rain": {
+            "type": "noul",
+            "noul": 0.5082942833688233
+          }
+        }
+      },
+      "choice": "NO",
+      "choice_probabilities": {
+        "YES": 0.34157948115319514,
+        "NO": 0.4717894112129948,
+        "UNKNOWN": 0.18663110763381002
+      },
+      "choice_response": {
+        "model": "nimble",
+        "usage": {
+          "input_tokens": 229,
+          "output_tokens": 1
+        },
+        "answers": {
+          "might_rain": {
+            "type": "choice",
+            "choice": "NO",
+            "confidence": 0.05825020349149601,
+            "probabilities": {
+              "YES": 0.34157948115319514,
+              "NO": 0.4717894112129948,
+              "UNKNOWN": 0.18663110763381002
+            }
+          }
+        }
+      }
+    },
+    {
+      "experiment": "B",
+      "state_label": "Rain evidence",
+      "expected_conceptually": "strong YES",
+      "state": {
+        "location": "Berlin",
+        "date": "2026-10-06",
+        "summary": "Heavy rain expected throughout the day"
+      },
+      "noul_yes": 0.9999098503290003,
+      "noul_response": {
+        "model": "nimble",
+        "usage": {
+          "input_tokens": 210,
+          "output_tokens": 1
+        },
+        "answers": {
+          "might_rain": {
+            "type": "noul",
+            "noul": 0.9999098503290003
+          }
+        }
+      },
+      "choice": "YES",
+      "choice_probabilities": {
+        "YES": 0.9994842669310291,
+        "NO": 0.00029160706952814094,
+        "UNKNOWN": 0.00022412599944282528
+      },
+      "choice_response": {
+        "model": "nimble",
+        "usage": {
+          "input_tokens": 238,
+          "output_tokens": 1
+        },
+        "answers": {
+          "might_rain": {
+            "type": "choice",
+            "choice": "YES",
+            "confidence": 0.9956556919352868,
+            "probabilities": {
+              "YES": 0.9994842669310291,
+              "NO": 0.00029160706952814094,
+              "UNKNOWN": 0.00022412599944282528
+            }
+          }
+        }
+      }
+    },
+    {
+      "experiment": "C",
+      "state_label": "Dry evidence",
+      "expected_conceptually": "strong NO",
+      "state": {
+        "location": "Berlin",
+        "date": "2026-10-06",
+        "summary": "Clear skies and dry conditions expected"
+      },
+      "noul_yes": 0.0011635895632510712,
+      "noul_response": {
+        "model": "nimble",
+        "usage": {
+          "input_tokens": 210,
+          "output_tokens": 1
+        },
+        "answers": {
+          "might_rain": {
+            "type": "noul",
+            "noul": 0.0011635895632510712
+          }
+        }
+      },
+      "choice": "NO",
+      "choice_probabilities": {
+        "YES": 0.00023895089351014495,
+        "NO": 0.9993476054946007,
+        "UNKNOWN": 0.00041344361188921057
+      },
+      "choice_response": {
+        "model": "nimble",
+        "usage": {
+          "input_tokens": 238,
+          "output_tokens": 1
+        },
+        "answers": {
+          "might_rain": {
+            "type": "choice",
+            "choice": "NO",
+            "confidence": 0.9946605473549273,
+            "probabilities": {
+              "YES": 0.00023895089351014495,
+              "NO": 0.9993476054946007,
+              "UNKNOWN": 0.00041344361188921057
+            }
+          }
+        }
+      }
+    },
+    {
+      "experiment": "D",
+      "state_label": "Conflicting evidence",
+      "expected_conceptually": "uncertain/conflicted",
+      "state": {
+        "location": "Berlin",
+        "date": "2026-10-06",
+        "summary": "Heavy rain expected throughout the day",
+        "additional_forecast": "Dry conditions with no precipitation expected"
+      },
+      "noul_yes": 0.9839862475276263,
+      "noul_response": {
+        "model": "nimble",
+        "usage": {
+          "input_tokens": 221,
+          "output_tokens": 1
+        },
+        "answers": {
+          "might_rain": {
+            "type": "noul",
+            "noul": 0.9839862475276263
+          }
+        }
+      },
+      "choice": "YES",
+      "choice_probabilities": {
+        "YES": 0.5988843876932768,
+        "NO": 0.015171821352069714,
+        "UNKNOWN": 0.3859437909546536
+      },
+      "choice_response": {
+        "model": "nimble",
+        "usage": {
+          "input_tokens": 249,
+          "output_tokens": 1
+        },
+        "answers": {
+          "might_rain": {
+            "type": "choice",
+            "choice": "YES",
+            "confidence": 0.32821846421669987,
+            "probabilities": {
+              "YES": 0.5988843876932768,
+              "NO": 0.015171821352069714,
+              "UNKNOWN": 0.3859437909546536
+            }
+          }
+        }
+      }
+    }
+  ]
+}

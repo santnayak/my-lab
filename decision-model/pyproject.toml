@@ -1,0 +1,12 @@
+[project]
+name = "decision-model"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Santhosh Nayak", email = "santhosh.nayak01@sap.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "typesafe-sdk>=0.7.2",
+]
